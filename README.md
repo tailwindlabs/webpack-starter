@@ -21,3 +21,7 @@ webpack --watch
 Webpack will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
 
 You can play around with `/dist/index.html` to see the effects of your changes.
+
+## Contributing
+
+Have a lot of experience with Webpack and suggestions on how we could improve this starter template? We'd love a PR!
