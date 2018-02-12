@@ -12,15 +12,16 @@ npm install
 yarn
 ```
 
-After that, start up Webpack:
+After that, start up the webpack-dev-server:
 
 ```
-webpack --watch
+npm run dev
+open http://localhost:8080/
 ```
 
 Webpack will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
 
-You can play around with `/index.html` to see the effects of your changes.
+You can play around with `/src/index.html` to see the effects of your changes.
 
 ## Contributing
 
