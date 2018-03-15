@@ -1,12 +1,10 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'styles.css',
-  },
+  entry: './src/styles.css',
+  mode: process.env.NODE_ENV,
   module: {
     rules: [
       {
@@ -15,13 +13,19 @@ module.exports = {
           fallback: 'style-loader',
           use: [
             { loader: 'css-loader', options: { importLoaders: 1 } },
-            'postcss-loader'
-          ]
-        })
-      }
-    ]
+            'postcss-loader',
+          ],
+        }),
+      },
+    ],
   },
   plugins: [
-    new ExtractTextPlugin('styles.css')
-  ]
+    new ExtractTextPlugin('styles.css', {
+      disable: process.env.NODE_ENV === 'development',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.ejs',
+    }),
+  ],
 }

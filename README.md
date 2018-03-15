@@ -12,15 +12,23 @@ npm install
 yarn
 ```
 
-After that, start up Webpack:
+After that, start up Webpack Development Server:
 
 ```
-webpack --watch
+npm run dev
 ```
 
-Webpack will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
+Webpack Development Server will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
 
 You can play around with `/index.html` to see the effects of your changes.
+
+To build a production bundle run:
+
+```
+npm run prod
+```
+
+After that you will have a ready to deploy bundle at `/dist`
 
 ## Contributing
 
