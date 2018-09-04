@@ -1718,6 +1718,10 @@ css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
+css.escape@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/css.escape/-/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
+
 cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
@@ -5754,13 +5758,14 @@ symbol-observable@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
-tailwindcss@^0.5.1:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.5.3.tgz#5444f85ab5e68a37c2bf13bc4ac097a7ee05321d"
+tailwindcss@>=0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.6.5.tgz#f692f875c373721d65ccecba5eb16fa949bcbb97"
   dependencies:
     commander "^2.11.0"
+    css.escape "^1.5.1"
     fs-extra "^4.0.2"
-    lodash "^4.17.4"
+    lodash "^4.17.5"
     perfectionist "^2.4.0"
     postcss "^6.0.9"
     postcss-functions "^3.0.0"
