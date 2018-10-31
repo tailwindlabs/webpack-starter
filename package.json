@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "prod": "cross-env NODE_ENV=production webpack --no-progress"
+    "prod": "cross-env NODE_ENV=production webpack --no-progress",
+    "start": "node server.js"
   },
   "devDependencies": {
     "cross-env": "^5.1",
@@ -12,7 +13,7 @@
     "postcss": "^6.0.19",
     "postcss-loader": "^2.1.1",
     "style-loader": "^0.20.3",
-    "tailwindcss": ">=0.6.5",
+    "tailwindcss": ">=0.6.6",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
