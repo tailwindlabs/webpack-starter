@@ -33,3 +33,9 @@ After that you will have a ready to deploy bundle at `/dist`
 ## Contributing
 
 Have a lot of experience with Webpack and suggestions on how we could improve this starter template? We'd love a PR!
+
+## Run on Glitch
+
+1. Open console in Advanced Options.
+2. Tailwind needs access to Webpack to work. To allow this, copy the following command into terminal: ```chmod -R u+x node_modules/webpack/bin```. You only need to do this once per session.
+3. To start Tailwind: ```npm run dev```.
