@@ -20,7 +20,9 @@ npm run dev
 
 Webpack Development Server will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
 
-You can play around with `/index.html` to see the effects of your changes.
+You can play around with `src/template/index.html` to see the effects of your changes.
+
+You can also add more pages in `src/template/`. In order for webpack to pick up new pages, you have to restart the webpack development server.
 
 To build a production bundle run:
 
