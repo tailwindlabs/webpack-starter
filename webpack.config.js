@@ -1,5 +1,5 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require("path")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -9,23 +9,29 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            'postcss-loader',
-          ],
-        }),
-      },
-    ],
+        use: [
+          process.env.NODE_ENV === "development"
+            ? "style-loader"
+            : MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: { importLoaders: 1 }
+          },
+          {
+            loader: "postcss-loader"
+          }
+        ]
+      }
+    ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css', {
-      disable: process.env.NODE_ENV === 'development',
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+      chunkFilename: '[id].css'
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-    }),
-  ],
-}
+    })
+  ]
+};
