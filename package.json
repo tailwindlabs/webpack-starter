@@ -5,6 +5,7 @@
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.4",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
