@@ -1,3 +1,9 @@
+**Note: This project is deprecated.** It was never a very good starter for real projects since you don't want your CSS framework to dictate your starter webpack setup — better to use vue-cli, create-react-app, etc.
+
+We recommend using the [tailwindcss/playground](https://github.com/tailwindcss/playground) starter if you just want a simple project for playing around with Tailwind and PostCSS.
+
+---
+
 # Tailwind CSS Webpack Starter Project
 
 This is an example of a super simple Webpack setup for using [Tailwind CSS](https://tailwindcss.com).
